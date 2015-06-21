@@ -1,3 +1,7 @@
+/*
+Place all webpack loaders in this file.
+*/
+
 'use strict';
 
 module.exports = {

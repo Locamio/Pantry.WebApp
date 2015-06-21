@@ -1,3 +1,7 @@
+/*
+	Define the component files that are to be bundled.
+*/
+
 'use strict';
 
 var _ = require('underscore');
