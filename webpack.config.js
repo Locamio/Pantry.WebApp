@@ -1,34 +1,17 @@
-module.exports = {
-	cache: true,
- 	context: __dirname + "/src.js",
-  	entry: "./index.js",
-	output: {
-	 	filename: "bundle.js",
-	  	path: __dirname + "/dist",
-	},
-	devtool: 'source-map',
-	module: {
-		loaders: [
-			{
-				test: /\.js$/,
-				include: /src.js/,
-				loader: 'babel-loader',
-				query: {modules: 'common'}
-			},
-			{
-				test: /\.less$/,
-				loader: 'style!css!less'
-			},
-			{
-				test: /\.json$/,
-				loader: 'json'
-			},
-			{
-				test: /\.tag$/,
-				include: /src.js/,
-				loader: 'tag',
-				query: {compact: 'true'}
-			}
-		]
-	}
-}
+'use strict';
+
+var _ = require('underscore');
+var baseConfig = require('./webpack.base.config');
+
+module.exports = _.extend({}, baseConfig, {
+    cache: true,
+    entry: {
+        'app': './src/js/app.es6'
+    },
+    output: {
+        path: 'dist/',
+        filename: 'bundle.js',
+        library: 'MyLib',
+        libraryTarget: 'umd'
+    }
+});
