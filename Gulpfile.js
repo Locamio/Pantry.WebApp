@@ -3,8 +3,7 @@
     livereload = require('gulp-livereload'),
     del = require('del'),
     watch = require('gulp-watch'),
-    riot = require('gulp-riot'),
-    ts = require('gulp-typescript');
+    riot = require('gulp-riot');
 
 // var config = {
 //     //Include all js files but exclude any min.js files
