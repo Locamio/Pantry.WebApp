@@ -22,6 +22,12 @@ module.exports = {
 			{
 				test: /\.json$/,
 				loader: 'json'
+			},
+			{
+				test: /\.tag$/,
+				include: /src.js/,
+				loader: 'tag',
+				query: {compact: 'true'}
 			}
 		]
 	}
