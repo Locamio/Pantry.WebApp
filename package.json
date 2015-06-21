@@ -12,7 +12,9 @@
     "type": "git",
     "url": ""
   },
-  "dependencies": {},
+  "dependencies": {
+    "riotcontrol": "0.0.1"
+  },
   "devDependencies": {
     "babel": "^5.6.1",
     "babel-core": "^5.6.1",
