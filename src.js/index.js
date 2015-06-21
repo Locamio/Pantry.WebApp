@@ -4,9 +4,9 @@ Whats this stuff do?
 'use strict';
 
 import riot from 'riot';
-import TodoStore from './todo-store.js';
+import TodoStore from './stores/todo-store.js';
 import dispatcher from './dispatcher.js';
-import './tags.js'
+import './views/tags.js'
 
 let todoStore = new TodoStore(dispatcher);
 dispatcher.addStore(todoStore);
