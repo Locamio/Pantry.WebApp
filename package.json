@@ -28,6 +28,9 @@
   },
   "dependencies": {
     "cyclejs": "^0.24.1",
-    "immutable": "^3.7.4"
+    "immutable": "^3.7.4",
+    "install": "^0.1.8",
+    "npm": "^2.12.1",
+    "react": "^0.13.3"
   }
 }
