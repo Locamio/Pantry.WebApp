@@ -16,7 +16,7 @@ var commonsPlugin =
 
 module.exports = {
   entry: {
-    app: './src/entry',
+    app: './src/app',
     shop: './src/shop',
     product: './src/product',
     vendors: []
