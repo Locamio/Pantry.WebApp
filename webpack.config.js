@@ -18,7 +18,7 @@ module.exports = {
   entry: {
     app: './src/entry',
     shop: './src/shop',
-    product: './src/product.js',
+    product: './src/product',
     vendors: []
   },
   output: {
@@ -51,6 +51,6 @@ module.exports = {
   },
   resolve: {
     // you can now require('file') instead of require('file.js')
-    extensions: ['', '.js', '.json']
+    extensions: ['', '.js', '.json', '.jsx']
   }
 };
