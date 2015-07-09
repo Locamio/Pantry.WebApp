@@ -34,7 +34,11 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.css$/,
+      exclude: /\.useable\.css$/,
       loader: "style!css"
+    }, {
+      test: /\.useable\.css$/,
+      loader: "style/useable!css"
     }, {
       // inline base64 URLs for <=8k images, direct URLs for the rest
       test: /\.(png|jpg)$/,
