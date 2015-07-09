@@ -1,0 +1,29 @@
+{
+  "name": "pantry",
+  "version": "1.0.0",
+  "description": "the pantry front end app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Locamio/Pantry.WebApp.git"
+  },
+  "keywords": [
+    "pantry",
+    "market",
+    "larder"
+  ],
+  "author": "The Pantry Team New Zealand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Locamio/Pantry.WebApp/issues"
+  },
+  "homepage": "https://github.com/Locamio/Pantry.WebApp#readme",
+  "devDependencies": {
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  }
+}
