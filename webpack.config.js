@@ -1,5 +1,7 @@
 'use strict';
 
+// define webpack for plugins
+// define path for dynamic paths
 var webpack = require('webpack');
 var path = require("path");
 
@@ -10,35 +12,41 @@ var definePlugin = new webpack.DefinePlugin({
 });
 
 var commonsPlugin =
-  new webpack.optimize.CommonsChunkPlugin('common.js');
+  new webpack.optimize.CommonsChunkPlugin('common.js', ['app', 'shop']);
 
 module.exports = {
   entry: {
-    app: './src/entry.js',
-    shop: './src/shop.js',
+    app: './src/entry',
+    shop: './src/shop',
     product: './src/product.js',
-    vendor: []
+    vendors: []
   },
   output: {
-    path: path.join(__dirname, "js"), //path to where webpack will build your stuff
-    filename: '[name].js', // Template based on keys in entry above
-    publicPath: "/assets/", //path that will be considered when requiring your files
-    plugins: [definePlugin]
+    // path to where webpack will build your stuff
+    path: path.join(__dirname, "js"),
+    // Template based on keys in entry above
+    filename: '[name].js',
+    // path that will be considered when requiring your files
+    publicPath: "/assets/",
+    // define plugins for webpack mode and chunking
+    plugins: [definePlugin, commonsPlugin]
   },
   module: {
     loaders: [{
-        test: /\.css$/,
-        loader: "style!css"
-      }, {
-        test: /\.(png|jpg)$/,
-        loader: 'url-loader?limit=8192'
-      } // inline base64 URLs for <=8k images, direct URLs for the rest
-    ]
+      test: /\.css$/,
+      loader: "style!css"
+    }, {
+      // inline base64 URLs for <=8k images, direct URLs for the rest
+      test: /\.(png|jpg)$/,
+      loader: 'url-loader?limit=8192'
+    }, {
+      test: /\.jsx?$/,
+      exclude: /(node_modules|bower_components)/,
+      loader: 'babel'
+    }]
   },
   resolve: {
     // you can now require('file') instead of require('file.js')
     extensions: ['', '.js', '.json']
   }
 };
-
-
