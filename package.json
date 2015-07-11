@@ -4,7 +4,7 @@
   "description": "the pantry front end app",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "dev-server": "webpack-dev-server --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -30,11 +30,10 @@
     "css-loader": "^0.15.2",
     "immutable": "^3.7.4",
     "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.2.0",
+    "sass-loader": "^1.0.2",
     "style-loader": "^0.12.3",
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.10.1"
-  },
-  "scripts":{
-    "dev-server": "webpack-dev-server --progress --colors"
   }
 }
