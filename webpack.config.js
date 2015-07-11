@@ -40,6 +40,9 @@ module.exports = {
       test: /\.useable\.css$/,
       loader: "style/useable!css"
     }, {
+      test: /\.scss$/,
+      loader: 'style!css!sass'
+    }, {
       // inline base64 URLs for <=8k images, direct URLs for the rest
       test: /\.(png|jpg)$/,
       loader: 'url-loader?limit=8192'
