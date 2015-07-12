@@ -21,15 +21,15 @@ var config = {
   devtool: 'eval',
   entry: {
     app: './app',
-    shop: './shop',
-    product: './product',
-    vendors: []
+    vendor: './vendor',
+    product: './product'
   },
   output: {
     // path to where webpack will build your stuff
-    path: path.join(__dirname, "js"),
+    path: path.join(__dirname, "dist"),
     // Template based on keys in entry above
-    filename: '[name].js',
+    filename: '[name].bundle.js',
+    chunkFilename: "[id].bundle.js",
     // path that will be considered when requiring your files
     publicPath: "/assets/",
     // define plugins for webpack mode and chunking
@@ -55,9 +55,10 @@ var config = {
   },
   resolve: {
     // you can now require('file') instead of require('file.js')
-    extensions: ['', '.js', '.json', '.jsx']
+    extensions: ['', '.js', '.json', '.jsx', '.scss']
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"shared", /* filename= */"shared.bundle.js")
   ]
 };
 
