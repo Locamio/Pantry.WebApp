@@ -1,6 +1,16 @@
 # Pantry.WebApp
 Front end for web deployment of pantry
 
+#To setup
+`npm i`
+`bower i`
+
+#To compile the solution
+`webpack`
+
+#To run a test server
+`npm run dev-server`
+
 
 // this is something to do with sharing stuff between pages...
 // if (window.location.pathname === '/product') {
