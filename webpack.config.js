@@ -14,11 +14,15 @@ var definePlugin = new webpack.DefinePlugin({
 var commonsPlugin =
   new webpack.optimize.CommonsChunkPlugin('common.js', ['app', 'shop']);
 
-module.exports = {
+var config = {
+  context: path.join(__dirname + "/src"),
+  // Makes sure errors in console map to the correct file
+  // and line number
+  devtool: 'eval',
   entry: {
-    app: './src/app',
-    shop: './src/shop',
-    product: './src/product',
+    app: './app',
+    shop: './shop',
+    product: './product',
     vendors: []
   },
   output: {
@@ -33,16 +37,13 @@ module.exports = {
   },
   module: {
     loaders: [{
-      test: /\.css$/,
-      exclude: /\.useable\.css$/,
-      loader: "style!css"
-    }, {
-      test: /\.useable\.css$/,
-      loader: "style/useable!css"
-    }, {
       test: /\.scss$/,
-      loader: 'style!css!sass'
-    }, {
+      loader: "style!css!sass?sourceMap&outputStyle=expanded&"  +
+          "includePaths[]=" +
+            (path.resolve(__dirname, "./bower_components")) + "&" +
+          "includePaths[]=" +
+            (path.resolve(__dirname, "./node_modules"))
+    },{
       // inline base64 URLs for <=8k images, direct URLs for the rest
       test: /\.(png|jpg)$/,
       loader: 'url-loader?limit=8192'
@@ -55,5 +56,9 @@ module.exports = {
   resolve: {
     // you can now require('file') instead of require('file.js')
     extensions: ['', '.js', '.json', '.jsx']
-  }
+  },
+  plugins: [
+  ]
 };
+
+module.exports = config;
