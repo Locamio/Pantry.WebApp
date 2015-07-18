@@ -1,2 +1,2 @@
-import {Rx} from '@cycle/core';
-import {h} from '@cycle/web';
+import {Rx} from 'cyclejs';
+import {h} from 'cyclejs';

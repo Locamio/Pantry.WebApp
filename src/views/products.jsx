@@ -1,5 +1,5 @@
-import {Rx} from '@cycle/core';
-import {h} from '@cycle/web';
+import {Rx} from 'cyclejs';
+import {h} from 'cyclejs';
 
 export default function view(todos$) {
   return {
