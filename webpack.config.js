@@ -18,11 +18,11 @@ var config = {
     context: path.join(__dirname + "/src"),
     // Makes sure errors in console map to the correct file
     // and line number
-    devtool: 'eval',
     entry: {
         app: './app',
-        vendor: './vendor',
-        product: './product'
+        shop: './shop',
+        product: './product',
+        vendor: ['jquery', 'hammerjs']
     },
     output: {
         // path to where webpack will build your stuff
@@ -54,18 +54,44 @@ var config = {
             test: /\.(png|jpg)$/,
             loader: 'url-loader?limit=8192'
         }, {
-            test: /\.jsx?$/,
+            test: /\.js[x]?$/,
             exclude: /(node_modules|bower_components)/,
             loader: 'babel'
         }]
     },
     resolve: {
+        node: {
+            fs: "empty"
+        },
+        // root: [
+        //     path.resolve('public/js'),
+        //     path.resolve('public/components')
+        // ],
+        modulesDirectories: [
+            'components',
+            'node_modules'
+        ],
+        alias: {
+            // you can create aliases to certain paths and than just require tho alias
+            //underscore: 'lodash/dist/lodash.compat.js',
+            jhammer: 'jquery-hammerjs/jquery.hammer.js',
+            velocity: '/components/velocity.min.js'
+        },
         // you can now require('file') instead of require('file.js')
         extensions: ['', '.js', '.json', '.jsx', '.scss']
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin( /* chunkName= */ "shared", /* filename= */ "shared.bundle.js")
-    ]
+        new webpack.optimize.CommonsChunkPlugin( /* chunkName= */ "shared", /* filename= */ "shared.bundle.js"),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            _: 'underscore'
+        })
+    ],
+    debug: true,
+    watch: true,
+    watchDelay: 200,
+    devtool: "#inline-source-map"
 };
 
 module.exports = config;
