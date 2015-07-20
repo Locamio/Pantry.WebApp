@@ -22,7 +22,7 @@ var config = {
         app: './app',
         shop: './shop',
         product: './product',
-        vendor: ['jquery', 'hammerjs']
+        vendor: ['velocity', 'jquery']
     },
     output: {
         // path to where webpack will build your stuff
@@ -67,30 +67,26 @@ var config = {
         //     path.resolve('public/js'),
         //     path.resolve('public/components')
         // ],
-        modulesDirectories: [
-            'components',
-            'node_modules'
-        ],
         alias: {
             // you can create aliases to certain paths and than just require tho alias
-            //underscore: 'lodash/dist/lodash.compat.js',
-            jhammer: 'jquery-hammerjs/jquery.hammer.js',
-            velocity: '/components/velocity.min.js'
+            underscore: 'lodash/dist/lodash.compat.js'
         },
         // you can now require('file') instead of require('file.js')
         extensions: ['', '.js', '.json', '.jsx', '.scss']
+    },
+    externals: {
+        velocity: 'velocity-animate/velocity.js'
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin( /* chunkName= */ "shared", /* filename= */ "shared.bundle.js"),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
-            _: 'underscore'
+            _: 'underscore',
+            "windows.jQuery": "jquery"
         })
     ],
     debug: true,
-    watch: true,
-    watchDelay: 200,
     devtool: "#inline-source-map"
 };
 
