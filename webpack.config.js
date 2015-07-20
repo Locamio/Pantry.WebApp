@@ -22,7 +22,7 @@ var config = {
         app: './app',
         shop: './shop',
         product: './product',
-        vendor: ['velocity', 'jquery']
+        vendor: []
     },
     output: {
         // path to where webpack will build your stuff
@@ -37,6 +37,9 @@ var config = {
     },
     module: {
         loaders: [{
+            test: /\.css$/,
+            loader: "style-loader!css-loader"
+        }, {
             test: /\.scss$/,
             loader: "style!css!sass?sourceMap&outputStyle=expanded&" +
                 "includePaths[]=" +
@@ -74,16 +77,10 @@ var config = {
         // you can now require('file') instead of require('file.js')
         extensions: ['', '.js', '.json', '.jsx', '.scss']
     },
-    externals: {
-        velocity: 'velocity-animate/velocity.js'
-    },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin( /* chunkName= */ "shared", /* filename= */ "shared.bundle.js"),
         new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            _: 'underscore',
-            "windows.jQuery": "jquery"
+            _: 'underscore'
         })
     ],
     debug: true,
