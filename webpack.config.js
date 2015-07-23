@@ -22,7 +22,7 @@ var config = {
         app: './app',
         shop: './shop',
         product: './product',
-        vendor: []
+        vendor: ['cyclejs']
     },
     output: {
         // path to where webpack will build your stuff
@@ -78,7 +78,7 @@ var config = {
         extensions: ['', '.js', '.json', '.jsx', '.scss']
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin( /* chunkName= */ "shared", /* filename= */ "shared.bundle.js"),
+        new webpack.optimize.CommonsChunkPlugin( /* chunkName= */ "vendor", /* filename= */ "vendor.bundle.js"),
         new webpack.ProvidePlugin({
             _: 'underscore'
         })

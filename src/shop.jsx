@@ -1,1 +1,1 @@
-require('./shared_cycle')
+import './shared_cycle';
