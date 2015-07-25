@@ -72,7 +72,8 @@ var config = {
         // ],
         alias: {
             // you can create aliases to certain paths and than just require tho alias
-            underscore: 'lodash/dist/lodash.compat.js'
+            underscore: 'lodash/dist/lodash.compat.js',
+            material: 'material-design-lite/src/material-design-lite.scss'
         },
         // you can now require('file') instead of require('file.js')
         extensions: ['', '.js', '.json', '.jsx', '.scss']
