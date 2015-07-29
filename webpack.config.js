@@ -19,7 +19,7 @@ var config = {
     // Makes sure errors in console map to the correct file
     // and line number
     entry: {
-        app: './app',
+        app: ['webpack/hot/dev-server', './app'],
         shop: './shop',
         product: './product',
         vendor: ['cyclejs']

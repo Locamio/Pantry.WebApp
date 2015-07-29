@@ -10,3 +10,7 @@
 .right {
   @include span(8);
 }
+
+.text-white {
+  color: white;
+}
