@@ -11,7 +11,7 @@ section {
 
 aside {
     height: 100%;
-    @include span(3 at 5 of 8);
+    @include span(3 at 6 of 8);
 }
 
 .productPhoto {
@@ -37,7 +37,7 @@ aside {
     border-style: dotted;
     border-width: 1px;
     height: 450px;
-    width: 500px;
+    width: 50px;
     margin-top: 30px;
     margin-left: 30px;
 }
