@@ -1,0 +1,43 @@
+@import "../../node_modules/susy/sass/_susy.scss";
+@charset "UTF-8";
+// // import materialize
+// @import "materialize";
+// // Custom style
+// @import "style.scss";
+section {
+    height: 100%;
+    @include span(5 at 1 of 8);
+}
+
+aside {
+    height: 100%;
+    @include span(3 at 6 of 8);
+}
+
+.productPhoto {
+    border-style: dotted;
+    border-width: 1px;
+    height: 450px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.prodPic {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sideContainer {
+    border-style: dotted;
+    border-width: 1px;
+    height: 450px;
+    width: 50px;
+    margin-top: 30px;
+    margin-left: 30px;
+}

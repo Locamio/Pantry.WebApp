@@ -1,0 +1,21 @@
+{
+  "name": "pantry",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Locamio/Pantry.WebApp",
+  "authors": [
+    "Daniel Lewis <danlewis.ltd@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.6.1",
+    "sass-vertical-rhythm": "*"
+  }
+}
