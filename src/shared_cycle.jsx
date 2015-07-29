@@ -1,2 +1,2 @@
 import Cycle from 'cyclejs';
-import 'material'
+require ('material');
