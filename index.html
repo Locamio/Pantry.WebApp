@@ -22,23 +22,24 @@
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title">Pantry</span>
-                <div class="mdl-layout-spacer"></div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
-                    <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
-                        <i class="material-icons">search</i>
-                    </label>
-                    <div class="mdl-textfield__expandable-holder">
-                        <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp" />
+                <div class="center">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-center">
+                        <label class="mdl-button--icon mdlo-button" for="fixed-header-drawer-exp">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <div class="mdl-textfield">
+                            <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp" />
+                        </div>
                     </div>
+                    <button id="demo-menu-lower-right" class="mdl-button mdl-js-button text-white">
+                        Categories
+                    </button>
+                    <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+                        <li class="mdl-menu__item">Some Action</li>
+                        <li class="mdl-menu__item">Another Action</li>
+                    </ul>
                 </div>
                 <!-- Right aligned menu below button -->
-                <button id="demo-menu-lower-right" class="mdl-button mdl-js-button text-white">
-                    Categories
-                </button>
-                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-                    <li class="mdl-menu__item">Some Action</li>
-                    <li class="mdl-menu__item">Another Action</li>
-                </ul>
             </div>
         </header>
         <div class="mdl-layout__drawer">

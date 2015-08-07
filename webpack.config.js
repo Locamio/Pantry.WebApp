@@ -19,7 +19,7 @@ var config = {
     // Makes sure errors in console map to the correct file
     // and line number
     entry: {
-        app: ['webpack/hot/dev-server', './app'],
+        app: ['./app'],
         shop: './shop',
         product: './product',
         vendor: ['cyclejs']
@@ -36,6 +36,15 @@ var config = {
         plugins: [definePlugin, commonsPlugin]
     },
     module: {
+        devServer: {
+            contentBase: "./build",
+            noInfo: false, //  use true to limit output to console to only warnings and errors
+            hot: true,
+            inline: true,
+            watchDelay: 300,
+            colors: true,
+            progress: true
+        },
         loaders: [{
             test: /\.css$/,
             loader: "style-loader!css-loader"
