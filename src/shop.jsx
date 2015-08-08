@@ -1,1 +1,1 @@
-import './shared_cycle';
+import './shared';

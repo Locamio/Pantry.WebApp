@@ -9,7 +9,10 @@ Front end for web deployment of pantry
 `webpack`
 
 #To run a test server
-`npm run dev-server`
+`npm start`
+
+#In the browser
+localhost:8080/webpack-dev-server/
 
 
 // this is something to do with sharing stuff between pages...
