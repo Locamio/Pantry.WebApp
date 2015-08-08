@@ -6,7 +6,16 @@
 // @import "materialize";
 // // Custom style
 // @import "style.scss";
+
+$susy: (
+	//container: 40em,
+	columns: 12,
+	gutter: .25,
+	output: isolate
+);
+
 .MainMrapper {
+    //@include container;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
@@ -30,12 +39,12 @@
 
 section {
     height: 100%;
-    @include span(5 at 1 of 8);
+    @include span(7);
 }
 
 aside {
     height: 100%;
-    @include span(3 at 6 of 8);
+    @include span(4);
 }
 
 .ProductHeadline {
@@ -49,20 +58,19 @@ aside {
 .productPhoto {
     border-style: dotted;
     border-width: 1px;
-    height: 800px;
     margin-top: 30px;
     margin-left: 30px;
 }
 
+.mainImgWrapper {
+	@include span(6 at 4);
+}
+
 .prodPic {
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-    height: auto;
-    width: auto;
     max-width: 100%;
     max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .sideContainer {
