@@ -1,26 +1,31 @@
 @import "../../node_modules/susy/sass/_susy.scss";
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
 @charset "UTF-8";
-
 // // import materialize
 // @import "materialize";
-
 // // Custom style
 // @import "style.scss";
+.MainMrapper {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .right {
-  @include span(8);
+    @include span(8);
 }
 
 .center {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 .text-white {
-  color: white;
+    color: white;
 }
 
 #mdlo-button {
-  left: -5%;
+    left: -5%;
 }
 
 section {
@@ -33,10 +38,18 @@ aside {
     @include span(3 at 6 of 8);
 }
 
+.ProductHeadline {
+    margin-top: 30px;
+    border-style: dotted;
+    border-width: 1px;
+    height: 20px;
+    width: auto;
+}
+
 .productPhoto {
     border-style: dotted;
     border-width: 1px;
-    height: 450px;
+    height: 800px;
     margin-top: 30px;
     margin-left: 30px;
 }
@@ -55,8 +68,55 @@ aside {
 .sideContainer {
     border-style: dotted;
     border-width: 1px;
-    height: 450px;
-    width: 50px;
+    height: 800px;
+    width: auto;
     margin-top: 30px;
     margin-left: 30px;
+    margin-right: 30px;
+}
+
+.productHeadingContainer {
+    border-style: dotted;
+    border-width: 1px;
+    height: 200px;
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.CompanyHeaderDiv {
+    width: 100%;
+}
+
+.CompanyHeader {
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 150%;
+    font-family: Roboto;
+}
+
+.ProdHeaderDiv {
+    margin-top: 7px;
+    width: 100%;
+}
+
+.ProdHeader {
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 400%;
+    line-height: 55px;
+    font-family: Raleway;
+}
+
+.taglineDiv {
+	 margin-top: 7px;
+    width: 100%;
+}
+
+.tagline {
+	 font-family: Roboto;
+	 font-size: 115%;
+	 opacity: 0.5;
+	 font-style: italic;
+
 }
